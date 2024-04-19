@@ -1,0 +1,188 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:fb="sap.ui.comp.filterbar" controllerName="br.com.gestao.fioriappreport100.controller.Lista" displayBlock="true">
+    <App id="Lista">
+
+    <Page id="page" title="{i18n>title}">
+    <content>
+    <SemanticPage xmlns="sap.f.semantic" showFooter="true" id="pageLista" headerPinnable="true" toggleHeaderOnTitleClick="true" preserveHeaderStateOnScroll="false" titleAreaShrinkRatio="1:1.6:1.6">
+        <titleHeading>
+            <m:Title xmlns:m="sap.m" text="Relatório de Produtos" id="title0"/>
+        </titleHeading>
+
+        <headerContent>
+
+       	<fb:FilterBar id="filterbar" reset="onReset" search="onSearch" useToolbar="false" showGoOnFB="false">
+
+							<fb:filterGroupItems>
+
+								<fb:FilterGroupItem xmlns:sap.m="sap.m" id="_IDGenFilterGroupItem1" label="Produto ID" name="Produto ID" labelTooltip="Insira o código do produto" visibleInFilterBar="true" groupName="Principal" groupTitle="Principal">
+									<fb:control>
+
+                                <sap.m:Input width="100%" placeholder="Insira o código do produto aqui" id="input0"/>                                   
+				
+									</fb:control>
+
+								</fb:FilterGroupItem>
+
+                                <fb:FilterGroupItem xmlns:sap.m="sap.m" id="_IDGenFilterGroupItem2" label="Nome Produto" name="Filter Item" labelTooltip="Insira o nome do produto" visibleInFilterBar="true" groupName="Principal" groupTitle="Principal">
+									
+                                    <fb:control>
+
+                                <sap.m:Input width="100%" placeholder="Insira o nome do produto aqui" id="input2"/>                                   
+				
+									</fb:control>
+
+								</fb:FilterGroupItem>
+
+							</fb:filterGroupItems>
+
+						</fb:FilterBar>
+
+        </headerContent>
+        <titleMainAction>
+
+            
+        </titleMainAction>
+
+        <titleCustomTextActions>            
+        </titleCustomTextActions>
+        <titleCustomIconActions>
+            
+        </titleCustomIconActions>
+        <content>
+            
+        <sap.m:Table xmlns:sap.m="sap.m" noDataText="Drop column list items here and columns in the area above" id="table0" items="{/Produtos}">
+            
+            <sap.m:items>
+            
+                <sap.m:ColumnListItem type="Active" id="item0">
+            
+                <sap.m:cells>
+            
+                    <sap.ui.core:Icon src="sap-icon://product" size="3rem" xmlns:sap.ui.core="sap.ui.core" id="icon0"/>
+            
+                    <Text xmlns="sap.m" text="{Productid}" id="text14"/>
+            
+                    <ObjectIdentifier xmlns="sap.m" title="{Name}" text="{Description}" id="identifier0"/>
+            
+                    <Text xmlns="sap.m" text="{Category}" id="text17"/>
+            
+                    <Text xmlns="sap.m" id="text18" text="{Supplierid}"/>
+            
+                    <Text xmlns="sap.m" text="{Measurement}" id="text19"/>
+            
+                    <ObjectNumber xmlns="sap.m" number="{Price}" unit="{Currencycode}" id="number0" state="Information"/>
+            
+                    <ObjectStatus xmlns="sap.m" text="{Status}" state="Warning" id="status0" icon="sap-icon://alert"/>
+            
+                    <Text xmlns="sap.m" text="{Createdat}" id="text22"/>
+            
+                </sap.m:cells>
+            
+                </sap.m:ColumnListItem>
+            
+            </sap.m:items>
+            
+            <sap.m:columns>
+            
+                <sap.m:Column id="column0">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Label text="Imagem" id="label0"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column1">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Label text="Id Produto" id="label1"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column2">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Label text="Nome" id="label2"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column0_1713460291813">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Text text="Categoria" id="text8_1713460291812"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column1_1713460299934">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Text text="Id Fornecedor" id="text9_1713460299934"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column2_1713460308879">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Text text="Unid Medida" id="text10"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column3">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Text text="Preço" id="text11"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column4">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Text text="Status" id="text12"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column>
+            
+                <sap.m:Column id="column5">
+            
+                    <sap.m:header>
+            
+                        <sap.m:Text text="Data de Criação" id="text13"/>
+            
+                    </sap.m:header>
+            
+                </sap.m:Column></sap.m:columns></sap.m:Table>
+            
+        </content>
+        <footerCustomActions>
+            
+        </footerCustomActions>
+        <titleSnappedContent>
+            <Title xmlns="sap.m" text="Relatório de Produtos por Status" id="title0_1712683561286"/>
+        </titleSnappedContent>
+        </SemanticPage>
+    </content>
+    </Page>
+        </App>
+</mvc:View>

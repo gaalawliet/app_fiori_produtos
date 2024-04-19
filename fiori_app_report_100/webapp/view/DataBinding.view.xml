@@ -1,0 +1,123 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="br.com.gestao.fioriappreport100.controller.DataBinding" displayBlock="true">
+    <App id="DataBinding">
+
+    <Page id="page" title="{i18n>title}">
+    <content>
+
+        <Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0">
+            <headerToolbar>
+                <Toolbar id="toolbar1">
+                    <Title id="headerTitle" text="Header"/>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                    <Button id="btnSettings" icon="sap-icon://settings"/>
+                    </Toolbar>
+                
+            </headerToolbar>
+            <content>
+                <List noDataText="Drop list items here" id="list1" items="{/Produtos}">
+                    <items>
+                        <StandardListItem type="Navigation" title="{Productid}" description="{Name}" icon="sap-icon://picture" id="item0"/>
+                    </items>
+                </List>
+            </content>
+            <infoToolbar>
+                <Toolbar width="100%" id="toolbar1_1712605190244">
+                    <content>
+                        <Text xmlns="sap.m" text="Informação adicional List" id="text0"/>
+                    </content>
+                </Toolbar>
+            </infoToolbar>
+            </Panel>
+
+        <Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0_1713293295469">
+
+            <headerToolbar>
+
+                <Toolbar id="toolbar1_1713293295469">
+
+                    <Title text="Header"/>
+
+                    <ToolbarSpacer/>
+
+                    <Button icon="sap-icon://settings"/>
+
+                    </Toolbar>
+
+                
+
+            </headerToolbar>
+
+            <content>
+
+                <List noDataText="Drop list items here" id="list0">
+
+                    <items>
+
+                        <StandardListItem type="Navigation" title="List Item 1" description="Description text" icon="sap-icon://picture" id="item0_1713293489802"/>
+
+                    </items>
+
+                </List>
+
+            </content>
+
+            </Panel>
+
+        <Panel xmlns="sap.m" width="auto" expandable="true" expanded="true" id="panel0_1713446015459">
+
+            <headerToolbar>
+
+                <Toolbar id="toolbar1_1713446015459">
+
+                    <Title text="Header"/>
+
+                    <ToolbarSpacer/>
+
+                    <Button icon="sap-icon://settings"/>
+
+                    </Toolbar>
+
+                
+
+            </headerToolbar>
+
+            <content>
+
+                <form:SimpleForm editable="true" layout="ResponsiveGridLayout" xmlns:sap.ui.core="sap.ui.core" id="form0">
+
+                    <form:content>
+
+                        <sap.ui.core:Title text="Title" id="title2"/>
+
+                        <Label text="Label 1" id="label0"/>
+
+                        <Input width="100%" id="input1"/>
+
+                        <Label text="Label 2" id="label1"/>
+
+                        <Input width="100%" id="input2">
+
+                            <suggestionItems>
+
+                                <SegmentedButtonItem id="item2"/>
+
+                                <SegmentedButtonItem id="item1"/>
+
+                                <SegmentedButtonItem id="item0_1713446422795"/>
+
+                            </suggestionItems>
+
+                        </Input></form:content>
+
+                </form:SimpleForm>
+
+                <Button xmlns="sap.m" text="Bind Element" press="getRegions" id="button4"/>
+
+            </content>
+
+            </Panel>
+
+    </content>
+    </Page>
+        </App>
+</mvc:View>
